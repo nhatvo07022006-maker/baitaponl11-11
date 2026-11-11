@@ -1,0 +1,2 @@
+using System.Configuration; using System.Data.SqlClient;
+namespace RetailSales.DAL { public static class Db { public static string Cs { get { return ConfigurationManager.ConnectionStrings["db"].ConnectionString; } } public static SqlConnection Open(){var c=new SqlConnection(Cs);c.Open();return c;} } }
